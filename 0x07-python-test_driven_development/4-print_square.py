@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """Defines a function that prints a square with #"""
 
 def print_square(size):
