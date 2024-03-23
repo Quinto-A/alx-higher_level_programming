@@ -14,7 +14,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_unordered_list(self):
         """Test an unordered list of integers."""
-       unordered = [3, 4, 2, 1]
+        unordered = [3, 4, 2, 1]
         self.assertEqual(max_integer(unordered), 4)
 
     def test_max_at_begginning(self):
@@ -47,7 +47,7 @@ class TestMaxInteger(unittest.TestCase):
         string = "Brennan"
         self.assertEqual(max_integer(string), 'r')
 
-    def  test_list_of_strings(self):
+    def test_list_of_strings(self):
         """Test a list of strings"""
         list_of_strings = ["Brennan", "is", "my", "name"]
         self.assertEqual(max_integer(list_of_strings), "name")
