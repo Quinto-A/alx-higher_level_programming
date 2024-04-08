@@ -2,7 +2,7 @@
 
 def best_score(a_dictionary):
     if a_dictionary:
-        sorted_items = sorted(a_dictionary.items(), key=lambda x: x[1])
-        return (sorted_items[-1])
+        sorted_items = max(a_dictionary, key=a_dictionary.get)
+        return (sorted_items)
     else:
         return (None)
