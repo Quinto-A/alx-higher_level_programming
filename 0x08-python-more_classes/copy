@@ -1,0 +1,7 @@
+width = 3
+rect = ""
+length = 4
+mmmfor _ in range (length):
+  rect += "#" * width + "\n"
+print(rect)
+#this is the source code
