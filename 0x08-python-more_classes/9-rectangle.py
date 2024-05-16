@@ -94,5 +94,5 @@ class Rectangle:
         if not isinstance(size, int):
             raise TypeError("width must be an integer")
         elif size < 0:
-            raise ValueError("width must be >= to 0")
+            raise ValueError("width must be >= 0")
         return cls(size, size)
