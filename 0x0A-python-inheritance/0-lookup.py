@@ -7,8 +7,7 @@ def lookup(obj):
     Args:
         obj(object): object whose attributes and methods is to be determined
     Returns:
-        list: A list string representing the names of the attributes and methods
+        list: A list representing the names of the attributes and methods
     """
-
 
     return dir(obj)
