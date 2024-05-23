@@ -4,6 +4,21 @@ This module defines a class
 
     >>> MyList = __import__('1-my_list').MyList
     >>> my_list = MyList()
+    >>> my_list
+    []
+
+::
+
+    >>> isinstance(my_list, Mylist)
+    True
+
+::
+
+    >>> isinstance(my_list, MyList)
+    True
+
+::
+
     >>> my_list.append(1)
     >>> my_list.append(4)
     >>> my_list.append(2)
