@@ -6,7 +6,6 @@ class MyList(list):
     """Defines a module that sorts a list"""
 
     def print_sorted(self):
-        if not self:
-            raise ValueError("Cannot print sorted list: List is empty")
+        """Defines a module that sorts a list"""
 
         print(sorted(self))
