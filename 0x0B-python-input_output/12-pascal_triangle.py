@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ a function that returns list of lists"""
 
+
 def pascal_triangle(n):
     """ returns list of lists of integers"""
     if n <= 0:
         return []
-    
+
     triangle = []
 
     for i in range(n):
