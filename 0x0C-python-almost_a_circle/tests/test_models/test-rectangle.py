@@ -51,10 +51,21 @@ class TestRectangle(unittest.TestCase):
             Rectangle(-10, 20)
         self.assertEqual(str(e.exception), "width must be > 0")
 
+    def test_initialization_invalid_width_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(0, 20)
+        self.assertEqual(str(e.exception), "width must be > 0")
+
     def test_initialization_invalid_height_type(self):
         with self.assertRaises(TypeError) as e:
             Rectangle(10, "20")
         self.assertEqual(str(e.exception), "height must be an integer")
+
+    def test_initialization_invalid_height_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(10, 0)
+        self.assertEqual(str(e.exception), "height must be > 0")
+
 
     def test_initialization_invalid_height_value(self):
         with self.assertRaises(ValueError) as e:
