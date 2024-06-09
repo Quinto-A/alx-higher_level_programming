@@ -41,5 +41,56 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.x, 5)
         self.assertEqual(r1.y, 10)
 
+    def test_initialization_invalid_width_type(self):
+        with self.assertRaises(TypeError) as e:
+            Rectangle("10", 20)
+        self.assertEqual(str(e.exception), "width must be an integer")
+
+    def test_initialization_invalid_width_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(-10, 20)
+        self.assertEqual(str(e.exception), "width must be > 0")
+
+    def test_initialization_invalid_height_type(self):
+        with self.assertRaises(TypeError) as e:
+            Rectangle(10, "20")
+        self.assertEqual(str(e.exception), "height must be an integer")
+
+    def test_initialization_invalid_height_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(10, -20)
+        self.assertEqual(str(e.exception), "height must be > 0")
+
+    def test_initialization_invalid_x_type(self):
+        with self.assertRaises(TypeError) as e:
+            Rectangle(10, 20, "1", 2)
+        self.assertEqual(str(e.exception), "x must be an integer")
+
+    def test_initialization_invalid_x_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(10, 20, -1, 2)
+        self.assertEqual(str(e.exception), "x must be >= 0")
+
+    def test_initialization_invalid_y_type(self):
+        with self.assertRaises(TypeError) as e:
+            Rectangle(10, 20, 1, "2")
+        self.assertEqual(str(e.exception), "y must be an integer")
+
+    def test_initialization_invalid_y_value(self):
+        with self.assertRaises(ValueError) as e:
+            Rectangle(10, 20, 1, -2)
+        self.assertEqual(str(e.exception), "y must be >= 0")
+
+    def test_setter_valid_width(self):
+        r = Rectangle(10, 20)
+        r.width = 30
+        self.assertEqual(r.width, 30)
+
+    def test_setter_invalid_width(self):
+        r = Rectangle(10, 20)
+        with self.assertRaises(TypeError) as e:
+            r.width = "30"
+        self.assertEqual(str(e.exception), "width must be an integer")
+
 if __name__ == '__main__':
     unittest.main()
