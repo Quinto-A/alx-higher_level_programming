@@ -92,4 +92,4 @@ class Rectangle(Base):
         rectangle_str = ""
         for i in range(self.height):
             rectangle_str += "#" * self.width + "\n"
-        print(rectangle_str)
+        print(rectangle_str.rstrip("\n"))
