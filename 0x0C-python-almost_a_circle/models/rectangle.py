@@ -96,7 +96,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """overrides the __str__ method"""
-        return f"[Rectangle]({self.id}) {self.x}/{self.y}-" \
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
                f"{self.width}/{self.height}"
 
     def update(self, *args):
