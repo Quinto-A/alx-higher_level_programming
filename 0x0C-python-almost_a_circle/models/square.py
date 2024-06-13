@@ -28,6 +28,7 @@ class Square(Rectangle):
                f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
+        """assigns arguments to attributes"""
         if args:
             attr_list = ['id', 'size', 'x', 'y']
             for i, value in enumerate(args):
