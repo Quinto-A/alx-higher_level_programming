@@ -2,6 +2,7 @@
 
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):
@@ -171,6 +172,16 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError) as e:
             r.y = -5
         self.assertEqual(str(e.exception), "y must be >= 0")
+
+    def test_create_rectangle(self):
+        r1_dict = {'width': 2, 'height': 3, 'x': 12, 'y': 1, 'id': 89}
+        r1 = Rectagle.create(**r1_dict)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 12)
+        self.assertEqual(r1.y, 1)
+        self.assertEqual(r1.id, 89)
+
 
 if __name__ == '__main__':
     unittest.main()
