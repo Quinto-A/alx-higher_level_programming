@@ -5,8 +5,4 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-URL="$1"
-
-BODY_SIZE=$(curl -s -o /dev/null -w '%{size_download}' "$URL")
-
-echo "The size of the body of the response is ${BODY_SIZE} bytes"
+curl -s -o /dev/null -w '%{size_download}\n' "$1"
