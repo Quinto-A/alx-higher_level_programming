@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#check if URL provided
+
 if [ -z "$1" ]; then
 	echo "Usage: $0 <URL>"
 	exit 1
