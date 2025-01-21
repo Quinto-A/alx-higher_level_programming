@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #check if URL provided
 
 if [ -z "$1" ]; then
