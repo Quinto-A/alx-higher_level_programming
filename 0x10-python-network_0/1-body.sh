@@ -1,3 +1,3 @@
 #!/bin/bash
 #sends GET request and displays only body of code 200
-curl -s -w "%{http_code}%" "$1" -o response_body | grep -q "^200$" && cat response_body
+[ "$(curl -sL -w "%{http_code}%" -o response_body "$1")" eq 200|] && cat response_body || echo "Request failed"
