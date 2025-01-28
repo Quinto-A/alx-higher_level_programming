@@ -1,0 +1,3 @@
+[submodule "0x11-python-network_1/requests"]
+	path = 0x11-python-network_1/requests
+	url = https://github.com/psf/requests.git
