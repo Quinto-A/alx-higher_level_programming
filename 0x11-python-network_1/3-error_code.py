@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ sends request to URL and displays body of the response decoded """
 
-from urllib.request import Request,urlopen
-from urllib.error import URLError,HTTPError
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
 import sys
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     url = sys.argv[1]
     req = Request(url)
 
